@@ -1,0 +1,33 @@
+# PX4
+PX4-Autopilot/
+
+# ROS build artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Python
+**/__pycache__/
+*.pyc
+
+# VS Code
+.vscode/# PX4
+PX4-Autopilot/
+
+# External ROS dependencies
+ros2_ws/src/px4_msgs/
+
+# ROS2 build artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Python
+**/__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Linux
+.DS_Store
