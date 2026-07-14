@@ -1,5 +1,32 @@
-# Project-ALDAS
-This is Project ALDAS, stands for Autonomous Launching and Docking Assistance System
+<div align="center">
+
+<img src="./assets/logo.png" alt="ALDAS Logo" width="180"/>
+
+# ALDAS — Autonomous Launching and Docking Assistance System
+
+**Autonomous drone launch, docking, and charging via a mobile ground rover**
+
+[![ROS2](https://img.shields.io/badge/ROS2-Humble-blue)](https://docs.ros.org/en/humble/)
+[![PX4](https://img.shields.io/badge/PX4-Autopilot-1a1a1a)](https://px4.io/)
+[![Gazebo](https://img.shields.io/badge/Gazebo-Harmonic-orange)](https://gazebosim.org/)
+[![Status](https://img.shields.io/badge/status-in--progress-yellow)]()
+
+</div>
+
+---
+
+## Overview
+
+ALDAS enables a drone to autonomously launch from and dock onto a moving ground rover — which stores and charges it — allowing continuous, human-free operation cycles without fixed infrastructure.
+
+**Highlights**
+- Autonomous docking/launch coordination between a UAV and a mobile ground rover
+- Built on ROS2, with PX4 integration and Gazebo simulation
+- Custom control and path planning for precision approach/docking
+- Computer vision–based tracking for real-time alignment during docking
+- In-progress development with core modules functional
+
+---
 
 # PX4 + Gazebo Harmonic + ROS 2 Humble Development Environment Setup Guide
 
