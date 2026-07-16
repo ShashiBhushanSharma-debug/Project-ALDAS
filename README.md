@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/logo.png" alt="ALDAS Logo" width="180"/>
+<img src="./assets/aldas.png" alt="ALDAS Logo" width="180"/>
 
 # ALDAS — Autonomous Launching and Docking Assistance System
 
