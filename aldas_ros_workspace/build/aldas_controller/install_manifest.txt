@@ -1,0 +1,15 @@
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/ament_index/resource_index/package_run_dependencies/aldas_controller
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/ament_index/resource_index/parent_prefix_path/aldas_controller
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/environment/ament_prefix_path.sh
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/environment/ament_prefix_path.dsv
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/environment/path.sh
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/environment/path.dsv
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/local_setup.bash
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/local_setup.sh
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/local_setup.zsh
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/local_setup.dsv
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/package.dsv
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/ament_index/resource_index/packages/aldas_controller
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/cmake/aldas_controllerConfig.cmake
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/cmake/aldas_controllerConfig-version.cmake
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/package.xml

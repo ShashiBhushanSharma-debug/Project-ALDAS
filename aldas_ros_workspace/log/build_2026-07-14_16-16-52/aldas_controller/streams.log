@@ -1,0 +1,54 @@
+[0.011s] Invoking command in '/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller': AMENT_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/shashi/ALDAS/aldas_ros_workspace/src/aldas_controller -DCMAKE_INSTALL_PREFIX=/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller
+[0.064s] -- The C compiler identification is GNU 13.3.0
+[0.118s] -- The CXX compiler identification is GNU 13.3.0
+[0.133s] -- Detecting C compiler ABI info
+[0.223s] -- Detecting C compiler ABI info - done
+[0.234s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.234s] -- Detecting C compile features
+[0.234s] -- Detecting C compile features - done
+[0.242s] -- Detecting CXX compiler ABI info
+[0.343s] -- Detecting CXX compiler ABI info - done
+[0.349s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.349s] -- Detecting CXX compile features
+[0.349s] -- Detecting CXX compile features - done
+[0.351s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.502s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.610s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.646s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.658s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.671s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.686s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.767s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.770s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.871s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.895s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.924s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.031s] -- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.079s] -- Found px4_msgs: 1.17.0 (/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/share/px4_msgs/cmake)
+[1.105s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.237s] -- Added test 'lint_cmake' to check CMake code style
+[1.238s] -- Added test 'xmllint' to check XML markup files
+[1.240s] -- Configuring done (1.2s)
+[1.243s] -- Generating done (0.0s)
+[1.245s] -- Build files have been written to: /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller
+[1.254s] Invoked command in '/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller' returned '0': AMENT_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/shashi/ALDAS/aldas_ros_workspace/src/aldas_controller -DCMAKE_INSTALL_PREFIX=/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller
+[1.255s] Invoking command in '/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller': AMENT_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller -- -j12 -l12
+[1.305s] Invoked command in '/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller' returned '0': AMENT_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller -- -j12 -l12
+[1.306s] Invoking command in '/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller': AMENT_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller
+[1.317s] -- Install configuration: ""
+[1.317s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/ament_index/resource_index/package_run_dependencies/aldas_controller
+[1.317s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/ament_index/resource_index/parent_prefix_path/aldas_controller
+[1.317s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/environment/ament_prefix_path.sh
+[1.317s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/environment/ament_prefix_path.dsv
+[1.317s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/environment/path.sh
+[1.318s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/environment/path.dsv
+[1.318s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/local_setup.bash
+[1.318s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/local_setup.sh
+[1.318s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/local_setup.zsh
+[1.318s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/local_setup.dsv
+[1.318s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/package.dsv
+[1.318s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/ament_index/resource_index/packages/aldas_controller
+[1.318s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/cmake/aldas_controllerConfig.cmake
+[1.319s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/cmake/aldas_controllerConfig-version.cmake
+[1.319s] -- Installing: /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_controller/share/aldas_controller/package.xml
+[1.320s] Invoked command in '/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller' returned '0': AMENT_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller

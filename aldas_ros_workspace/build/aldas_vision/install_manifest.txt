@@ -1,0 +1,15 @@
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/ament_index/resource_index/package_run_dependencies/aldas_vision
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/ament_index/resource_index/parent_prefix_path/aldas_vision
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/environment/ament_prefix_path.sh
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/environment/ament_prefix_path.dsv
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/environment/path.sh
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/environment/path.dsv
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/local_setup.bash
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/local_setup.sh
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/local_setup.zsh
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/local_setup.dsv
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/package.dsv
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/ament_index/resource_index/packages/aldas_vision
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/cmake/aldas_visionConfig.cmake
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/cmake/aldas_visionConfig-version.cmake
+/home/shashi/ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/package.xml

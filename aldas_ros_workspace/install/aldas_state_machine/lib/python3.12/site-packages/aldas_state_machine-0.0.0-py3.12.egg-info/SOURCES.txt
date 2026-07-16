@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+../../build/aldas_state_machine/aldas_state_machine.egg-info/PKG-INFO
+../../build/aldas_state_machine/aldas_state_machine.egg-info/SOURCES.txt
+../../build/aldas_state_machine/aldas_state_machine.egg-info/dependency_links.txt
+../../build/aldas_state_machine/aldas_state_machine.egg-info/requires.txt
+../../build/aldas_state_machine/aldas_state_machine.egg-info/top_level.txt
+../../build/aldas_state_machine/aldas_state_machine.egg-info/zip-safe
+aldas_state_machine/__init__.py
+resource/aldas_state_machine
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

@@ -1,0 +1,9 @@
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/uninstall.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/aldas_controller_uninstall.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/test.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/edit_cache.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/rebuild_cache.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/list_install_components.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/install.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/install/local.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_controller/CMakeFiles/install/strip.dir

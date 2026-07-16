@@ -1,0 +1,9 @@
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/uninstall.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/aldas_vision_uninstall.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/test.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/edit_cache.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/rebuild_cache.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/list_install_components.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/install.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/install/local.dir
+/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/install/strip.dir

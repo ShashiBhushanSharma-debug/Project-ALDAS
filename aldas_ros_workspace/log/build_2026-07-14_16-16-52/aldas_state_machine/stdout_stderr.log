@@ -1,0 +1,30 @@
+running egg_info
+creating ../../build/aldas_state_machine/aldas_state_machine.egg-info
+writing ../../build/aldas_state_machine/aldas_state_machine.egg-info/PKG-INFO
+writing dependency_links to ../../build/aldas_state_machine/aldas_state_machine.egg-info/dependency_links.txt
+writing requirements to ../../build/aldas_state_machine/aldas_state_machine.egg-info/requires.txt
+writing top-level names to ../../build/aldas_state_machine/aldas_state_machine.egg-info/top_level.txt
+writing manifest file '../../build/aldas_state_machine/aldas_state_machine.egg-info/SOURCES.txt'
+reading manifest file '../../build/aldas_state_machine/aldas_state_machine.egg-info/SOURCES.txt'
+writing manifest file '../../build/aldas_state_machine/aldas_state_machine.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_state_machine/build
+creating /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_state_machine/build/lib
+creating /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_state_machine/build/lib/aldas_state_machine
+copying aldas_state_machine/__init__.py -> /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_state_machine/build/lib/aldas_state_machine
+running install
+running install_lib
+creating /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/lib/python3.12/site-packages/aldas_state_machine
+copying /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_state_machine/build/lib/aldas_state_machine/__init__.py -> /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/lib/python3.12/site-packages/aldas_state_machine
+byte-compiling /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/lib/python3.12/site-packages/aldas_state_machine/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/share/ament_index
+creating /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/share/ament_index/resource_index
+creating /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/share/ament_index/resource_index/packages
+copying resource/aldas_state_machine -> /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/share/ament_index/resource_index/packages
+copying package.xml -> /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/share/aldas_state_machine
+running install_egg_info
+Copying ../../build/aldas_state_machine/aldas_state_machine.egg-info to /home/shashi/ALDAS/aldas_ros_workspace/install/aldas_state_machine/lib/python3.12/site-packages/aldas_state_machine-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/shashi/ALDAS/aldas_ros_workspace/build/aldas_state_machine/install.log'

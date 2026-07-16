@@ -1,0 +1,4 @@
+source;share/aldas_controller/local_setup.bash
+source;share/aldas_controller/local_setup.dsv
+source;share/aldas_controller/local_setup.sh
+source;share/aldas_controller/local_setup.zsh
