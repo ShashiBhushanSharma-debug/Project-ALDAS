@@ -254,15 +254,6 @@ This launches:
 
 ---
 
-# Upstream Contributions
-
-During the development of the custom docking platform, a high-memory usage issue related to Gazebo camera simulation was identified and investigated.
-
-The issue was isolated, debugged, and reported upstream, resulting in a contribution to the PX4 ecosystem.
-
-*(Add the GitHub Pull Request link here after it is merged.)*
-
----
 
 # Future Work
 
