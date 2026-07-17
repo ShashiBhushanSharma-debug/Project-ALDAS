@@ -2,477 +2,309 @@
 
 <img src="./assets/aldas.png" alt="ALDAS Logo" width="250"/>
 
-# ALDAS — Autonomous Launching and Docking Assistance System
+# ALDAS
 
-**Autonomous drone launch, docking, and charging via a mobile ground rover**
+### Autonomous Launching and Docking Assistance System
 
-[![ROS2](https://img.shields.io/badge/ROS2-Humble-blue)](https://docs.ros.org/en/humble/)
-[![PX4](https://img.shields.io/badge/PX4-Autopilot-1a1a1a)](https://px4.io/)
-[![Gazebo](https://img.shields.io/badge/Gazebo-Harmonic-orange)](https://gazebosim.org/)
-[![Status](https://img.shields.io/badge/status-in--progress-yellow)]()
+**Autonomous UAV Launch, Docking, and Charging using a Mobile Ground Rover**
+
+![ROS2](https://img.shields.io/badge/ROS2-Jazzy-22314E?logo=ros)
+![PX4](https://img.shields.io/badge/PX4-Autopilot-00599C)
+![Gazebo](https://img.shields.io/badge/Gazebo-Harmonic-orange)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-E95420)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 </div>
 
 ---
 
-## Overview
+# Overview
 
-ALDAS enables a drone to autonomously launch from and dock onto a moving ground rover — which stores and charges it — allowing continuous, human-free operation cycles without fixed infrastructure.
+ALDAS (Autonomous Launching and Docking Assistance System) is a robotics platform designed to enable autonomous launch, precision docking, and charging of an unmanned aerial vehicle (UAV) using a mobile unmanned ground vehicle (UGV).
 
-**Highlights**
-- Autonomous docking/launch coordination between a UAV and a mobile ground rover
-- Built on ROS2, with PX4 integration and Gazebo simulation
-- Custom control and path planning for precision approach/docking
-- Computer vision–based tracking for real-time alignment during docking
-- In-progress development with core modules functional
+The objective is to eliminate manual intervention by allowing a drone to repeatedly:
+
+- Launch from a mobile rover
+- Perform autonomous missions
+- Detect and align with the moving docking station
+- Land accurately
+- Recharge
+- Repeat the mission cycle
+
+The project integrates **PX4**, **Gazebo Harmonic**, and **ROS 2 Jazzy** to provide a realistic simulation environment before deployment on physical hardware.
 
 ---
 
-# PX4 + Gazebo Harmonic + ROS 2 Humble Development Environment Setup Guide
+# Features
 
-> **Author's Note**
->
-> This document records the exact steps followed while setting up a PX4
-> Software-In-The-Loop (SITL) development environment on Ubuntu 22.04.
-> The intention is to create a reproducible setup that can later be
-> converted into a Docker-based environment for collaborative
-> development.
+- Autonomous UAV launch and docking
+- Custom PX4 Gazebo simulation model
+- Integrated RGB Camera
+- Integrated Depth Camera
+- Integrated 2D LiDAR
+- ROS 2 Integration
+- PX4 Offboard Control Support
+- Gazebo Harmonic Simulation
+- Modular project architecture
 
-------------------------------------------------------------------------
+---
 
-# 1. Objective
+# Custom Gazebo Vehicle
 
-The objective of this setup is to create a native PX4 simulation
-environment consisting of:
+A custom Gazebo vehicle named
 
--   Ubuntu 22.04.5 LTS
--   ROS 2 Humble
--   Gazebo Harmonic
--   PX4 Autopilot
--   QGroundControl (to be built from source)
--   Docker (planned after native setup)
-
-At the end of this phase, the X500 drone should successfully spawn
-inside Gazebo Harmonic.
-
-------------------------------------------------------------------------
-
-# 2. Software Architecture
-
-                    Gazebo Harmonic
-                (Physics + Sensors)
-                         ▲
-                         │
-                  Simulated Sensors
-                         │
-                         ▼
-                    PX4 SITL
-              (Flight Controller)
-                         │
-              MAVLink / uXRCE-DDS
-                │                │
-                ▼                ▼
-     QGroundControl          ROS 2
-          (Later)            (Later)
-
-------------------------------------------------------------------------
-
-# 3. System Requirements
-
-## Operating System
-
-Ubuntu 22.04.5 LTS
-
-## ROS
-
-ROS 2 Humble
-
-## Compiler
-
--   GCC 11+      
--   CMake 3.22+
--   Python 3.10+
--   Ninja
--   CCache
-
-------------------------------------------------------------------------
-
-# 4. Installation Procedure
-
-## Step 1 --- Verify Existing Environment
-
-### Purpose
-
-Before installing new software, verify the current system.
-
-### Commands
-
-``` bash
-lsb_release -a
-uname -r
-echo $XDG_SESSION_TYPE
-printenv | grep ROS
-gcc --version
-cmake --version
-python3 --version
-make --version
+```
+4022_gz_x500_docking
 ```
 
-### Expected Result
+has been developed specifically for ALDAS.
 
--   Ubuntu 22.04
--   X11 session
--   ROS 2 Humble
--   GCC available
--   Python available
--   CMake available
+Instead of using multiple independent PX4 models, the drone combines several existing Gazebo models into a single simulation platform.
 
-Reference:
-https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
+## Integrated Sensors
 
-------------------------------------------------------------------------
+- RGB Monocular Camera
+- Depth Camera
+- 2D LiDAR
+- Downward RGB Docking Camera
+- Downward Docking LiDAR
 
-## Step 2 --- Remove Gazebo Classic
+This unified platform enables realistic autonomous docking experiments without switching between different simulation models.
 
-### Why?
+---
 
-Gazebo Classic is no longer the recommended simulator for current PX4
-development. To avoid plugin conflicts and confusion, it was removed
-completely before installing Gazebo Harmonic.
+# System Architecture
 
+```
+                   Gazebo Harmonic
+          (Physics + Rendering + Sensors)
+                      │
+                      ▼
+               Custom X500 Docking Model
+                      │
+         ┌────────────┼────────────┐
+         │            │            │
+         ▼            ▼            ▼
+      RGB Cam     Depth Cam     LiDAR
+         │            │            │
+         └────────────┼────────────┘
+                      ▼
+                  ROS 2 Jazzy
+                      │
+             Perception & Planning
+                      │
+                      ▼
+                  PX4 Offboard
+                      │
+                      ▼
+                 PX4 SITL Flight Stack
+```
 
+---
 
-### Check for gazebo
+# Repository Structure
+
+```
+Project-ALDAS
+│
+├── PX4-Autopilot
+│
+├── aldas_ros_workspace
+│   ├── src
+│   ├── build
+│   ├── install
+│   └── log
+│
+├── thirdparty
+│   └── Micro-XRCE-DDS-Agent
+│
+├── assets
+│
+├── docs
+│
+├── README.md
+│
+└── LICENSE
+```
+
+---
+
+# Prerequisites
+
+- Ubuntu 24.04 LTS
+- ROS 2 Jazzy
+- Gazebo Harmonic
+- PX4-Autopilot
+- Micro XRCE-DDS Agent
+- CMake
+- Ninja
+- Python 3
+
+Detailed installation instructions are available in:
+
+```
+docs/setup.md
+```
+
+---
+
+# Clone Repository
 
 ```bash
-which gz
-gz sim --version
-```
-*if any of the above gives an output then follow the below commands.
+git clone --recursive <repository-url>
 
-### Commands
-
-``` bash
-sudo apt remove --purge \
-gazebo \
-gazebo-common \
-gazebo-plugin-base \
-libgazebo11 \
-libgazebo-dev \
-ros-humble-gazebo-dev \
-ros-humble-gazebo-msgs \
-ros-humble-gazebo-plugins \
-ros-humble-gazebo-ros \
-ros-humble-gazebo-ros-pkgs \
-ros-humble-turtlebot3-gazebo
-
-sudo apt autoremove
+cd Project-ALDAS
 ```
 
-### Verification
+---
 
-``` bash
-which gazebo
-which gz
-dpkg -l | grep gazebo
-```
+# Build PX4
 
-Expected:
-
-No Gazebo Classic packages should remain.
-
-Reference: https://gazebosim.org/docs
-
-------------------------------------------------------------------------
-
-## Step 3 --- Install Gazebo Harmonic
-
-### Purpose
-
-Install the simulator officially supported by modern PX4.
-
-### Commands
-
-``` bash
-sudo apt update
-sudo apt install -y curl lsb-release gnupg
-
-sudo curl https://packages.osrfoundation.org/gazebo.gpg \
--o /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
-
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
-
-sudo apt update
-sudo apt install -y gz-harmonic
-```
-
-### Verification
-
-``` bash
-gz sim
-gz sim shapes.sdf
-gz sim --version
-```
-
-Expected:
-
--   Gazebo opens successfully.
--   Shapes world loads.
--   Camera movement works.
--   Version reports Gazebo Sim 8.x.
-
-Reference: https://gazebosim.org/docs/harmonic/install
-
-------------------------------------------------------------------------
-
-## Step 4 --- Create Workspace
-
-``` bash
-mkdir -p ~/robotics
-cd ~/robotics
-```
-
-Purpose:
-
-Store all robotics projects under a single directory.
-
-------------------------------------------------------------------------
-
-## Step 5 --- Clone PX4
-
-``` bash
-git clone --recursive https://github.com/PX4/PX4-Autopilot.git
-
+```bash
 cd PX4-Autopilot
 
-git branch --show-current
-
-git submodule status
-```
-
-Expected:
-
--   Branch should be `main`
--   All submodules initialized
-
-Reference: https://docs.px4.io/main/en/dev_setup/building_px4.html
-
-------------------------------------------------------------------------
-
-## Step 6 --- Install PX4 Dependencies
-
-### Command
-
-``` bash
 bash Tools/setup/ubuntu.sh
-```
 
-### Purpose
-
-Installs:
-
--   Python dependencies
--   Ninja
--   CCache
--   GeographicLib
--   Build dependencies
-
-Reference:
-https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html
-
-------------------------------------------------------------------------
-
-## Step 7 --- Verify Build Environment
-
-``` bash
-python3 -m pip --version
-python3 -m pip list | grep empy
-ninja --version
-ccache --version
-```
-
-Expected:
-
-All commands should execute successfully.
-
-------------------------------------------------------------------------
-
-## Step 8 --- Build PX4
-
-``` bash
 make px4_sitl
 ```
 
-Purpose:
+---
 
-Compile the PX4 flight controller.
+# Launch Simulation
 
-Expected:
+```bash
+cd PX4-Autopilot
 
-Compilation completes without errors.
-
-------------------------------------------------------------------------
-
-## Step 9 --- Launch Simulation
-
-``` bash
-make px4_sitl gz_x500
+make px4_sitl 4022_gz_x500_docking
 ```
 
-Expected:
+This launches:
 
--   Gazebo launches.
--   X500 appears.
--   PX4 terminal starts.
--   Physics simulation begins.
+- PX4 SITL
+- Gazebo Harmonic
+- Custom docking drone
+- Integrated sensor suite
 
-Normal warnings include:
+---
 
-    Preflight Fail: No connection to the GCS
-    LED open failed
+# Sensor Topics
 
-These are expected before QGroundControl is connected.
+## RGB Camera
 
-------------------------------------------------------------------------
-
-# 5. Verification Checklist
-
--   Ubuntu verified
--   ROS 2 verified
--   Gazebo Classic removed
--   Gazebo Harmonic installed
--   Gazebo verified
--   PX4 cloned
--   PX4 dependencies installed
--   PX4 built successfully
--   X500 simulation launched
-
-------------------------------------------------------------------------
-
-# 6. Problems Encountered During Setup
-
-## 1. Gazebo Classic already installed
-
-Issue:
-
-ROS 2 Humble installation had already installed Gazebo Classic packages.
-
-Solution:
-
-Removed Gazebo Classic completely before installing Gazebo Harmonic.
-
-------------------------------------------------------------------------
-
-## 2. Gazebo version confusion
-
-Issue:
-
-`gz` command existed before Harmonic installation.
-
-Cause:
-
-Different Gazebo generations use different command-line tools.
-
-Solution:
-
-Verified installed packages using:
-
-``` bash
-dpkg -l | grep gazebo
-dpkg -l | grep ignition
+```
+/world/default/model/4022_gz_x500_docking/.../camera/image
 ```
 
-------------------------------------------------------------------------
+---
 
-## 3. QGroundControl download URL
+## Depth Camera
 
-Issue:
+```
+/world/default/model/4022_gz_x500_docking/.../depth_camera
+```
 
-Older CloudFront download URL returned HTTP 403.
+---
 
-Solution:
+## 2D LiDAR
 
-Use the official QGroundControl documentation or GitHub releases
-instead.
+```
+/world/default/model/4022_gz_x500_docking/.../scan
+```
 
-Reference:
+---
 
-https://docs.qgroundcontrol.com/
+## IMU
 
-------------------------------------------------------------------------
+```
+/imu
+```
 
-## 4. QGroundControl AppImage failed
+---
 
-Observed error:
+## GPS
 
--   GLIBC_2.36 not found
--   GLIBC_2.38 not found
--   GLIBCXX_3.4.32 not found
+```
+/navsat
+```
 
-Reason:
+---
 
-Latest AppImage targets newer Linux distributions than Ubuntu 22.04.
+# Development Roadmap
 
-Planned solution:
+- UAV–UGV Communication
+- Vision-based Docking
+- AprilTag Pose Estimation
+- Autonomous Precision Landing
+- Rover Navigation
+- Battery Charging Simulation
+- Hardware Integration
+- Multi-Drone Support
 
-Build QGroundControl from source so it links against Ubuntu 22.04 system
-libraries.
+---
 
-------------------------------------------------------------------------
+# Documentation
 
-## 5. Docker
+| Document | Description |
+|----------|-------------|
+| docs/setup.md | Environment setup |
+| docs/simulation.md | Running the simulation |
+| docs/architecture.md | System architecture |
+| docs/development-notes.md | Development notes |
+| docs/known-issues.md | Known issues and fixes |
 
-Why not start directly with Docker?
+---
 
-Decision:
+# Upstream Contributions
 
-Build everything natively first.
+During the development of the custom docking platform, a high-memory usage issue related to Gazebo camera simulation was identified and investigated.
 
-Reason:
+The issue was isolated, debugged, and reported upstream, resulting in a contribution to the PX4 ecosystem.
 
-Understanding the installation process makes debugging easier and
-provides a validated environment before containerization.
+*(Add the GitHub Pull Request link here after it is merged.)*
 
-Docker will be introduced only after the native setup is fully
-functional.
+---
 
-------------------------------------------------------------------------
+# Future Work
 
-# 7. Future Work
+- Autonomous docking controller
+- Visual servoing
+- AI-based landing guidance
+- SLAM integration
+- Real hardware deployment
+- Dockerized development environment
+- CI/CD pipeline
+- Multi-robot mission planning
 
--   Build QGroundControl from source
--   Connect QGroundControl to PX4
--   Understand MAVLink communication
--   Connect ROS 2 through Micro XRCE-DDS
--   Develop Offboard Control
--   Containerize the environment using Docker
--   Integrate Wokwi ESP32 simulations
--   Deploy on real PX4-compatible hardware
+---
 
-------------------------------------------------------------------------
+# Contributors
 
-# 8. References
+<table>
+<tr>
+<td align="center">
+<b>ALDAS Development Team</b>
+</td>
+</tr>
+</table>
 
-PX4 Documentation
+---
 
-https://docs.px4.io/
+# License
 
-Gazebo Documentation
+This project is licensed under the MIT License.
 
-https://gazebosim.org/docs
+See the [LICENSE](LICENSE) file for details.
 
-ROS 2 Documentation
+---
 
-https://docs.ros.org/en/humble/
+# Acknowledgements
 
-QGroundControl Documentation
+This project is built upon the work of the following open-source communities:
 
-https://docs.qgroundcontrol.com/
+- PX4 Autopilot
+- Gazebo Harmonic
+- ROS 2
+- MAVLink
+- eProsima Micro XRCE-DDS
 
-QGroundControl GitHub
-
-https://github.com/mavlink/qgroundcontrol
-
-PX4 GitHub
-
-https://github.com/PX4/PX4-Autopilot
+Their contributions have made this project possible.
