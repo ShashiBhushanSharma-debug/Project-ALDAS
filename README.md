@@ -204,15 +204,6 @@ This launches:
 
 ---
 
-# Upstream Contributions
-
-During the development of the custom docking platform, an abnormal memory growth issue related to Gazebo camera simulation was identified, investigated, and resolved.
-
-The investigation resulted in an upstream contribution to the PX4 ecosystem.
-
-> **Pull Request:** *(Add the GitHub PR link here once it is merged.)*
-
----
 
 # Contributors
 
