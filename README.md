@@ -41,7 +41,7 @@ The project integrates **PX4**, **Gazebo Harmonic**, and **ROS 2 Jazzy** to prov
 - Custom PX4 Gazebo simulation model
 - Integrated RGB Monocular Camera
 - Integrated Depth Camera
-- Integrated 2D LiDAR
+- Integrated 1D LiDAR
 - ROS 2 Integration
 - PX4 Offboard Control Support
 - Gazebo Harmonic Simulation
@@ -63,11 +63,9 @@ Instead of using multiple independent PX4 simulation models, this vehicle combin
 
 ### Integrated Sensor Suite
 
-- RGB Monocular Camera
-- Depth Camera
-- 2D LiDAR
+- Depth Camera OAK-D Lite
+- 1D LiDAR Downward
 - Downward RGB Docking Camera
-- Downward Docking LiDAR
 
 This unified platform enables realistic autonomous docking experiments without switching between different simulation models.
 
@@ -172,7 +170,7 @@ This launches:
 |----------|---------------|
 | RGB Camera | `/world/default/model/4022_gz_x500_docking/.../camera/image` |
 | Depth Camera | `/world/default/model/4022_gz_x500_docking/.../depth_camera` |
-| 2D LiDAR | `/world/default/model/4022_gz_x500_docking/.../scan` |
+| 1D LiDAR | `/world/default/model/4022_gz_x500_docking/.../scan` |
 | IMU | `/imu` |
 | GPS | `/navsat` |
 
@@ -194,7 +192,6 @@ This launches:
 
 - UAV–UGV Communication
 - Vision-Based Docking
-- AprilTag Pose Estimation
 - Precision Autonomous Landing
 - Rover Navigation
 - Battery Charging Simulation
