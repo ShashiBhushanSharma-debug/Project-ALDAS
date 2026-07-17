@@ -20,16 +20,16 @@
 
 # Overview
 
-ALDAS (Autonomous Launching and Docking Assistance System) is a robotics platform designed to enable autonomous launch, precision docking, and charging of an unmanned aerial vehicle (UAV) using a mobile unmanned ground vehicle (UGV).
+ALDAS (Autonomous Launching and Docking Assistance System) is a robotics platform designed to enable autonomous launch, precision docking, and charging of an Unmanned Aerial Vehicle (UAV) using a mobile Unmanned Ground Vehicle (UGV).
 
-The objective is to eliminate manual intervention by allowing a drone to repeatedly:
+The objective is to enable a fully autonomous mission cycle by allowing the UAV to:
 
-- Launch from a mobile rover
+- Launch from a mobile ground rover
 - Perform autonomous missions
 - Detect and align with the moving docking station
-- Land accurately
-- Recharge
-- Repeat the mission cycle
+- Execute precision landing
+- Recharge onboard
+- Relaunch for subsequent missions
 
 The project integrates **PX4**, **Gazebo Harmonic**, and **ROS 2 Jazzy** to provide a realistic simulation environment before deployment on physical hardware.
 
@@ -39,7 +39,7 @@ The project integrates **PX4**, **Gazebo Harmonic**, and **ROS 2 Jazzy** to prov
 
 - Autonomous UAV launch and docking
 - Custom PX4 Gazebo simulation model
-- Integrated RGB Camera
+- Integrated RGB Monocular Camera
 - Integrated Depth Camera
 - Integrated 2D LiDAR
 - ROS 2 Integration
@@ -51,17 +51,17 @@ The project integrates **PX4**, **Gazebo Harmonic**, and **ROS 2 Jazzy** to prov
 
 # Custom Gazebo Vehicle
 
-A custom Gazebo vehicle named
+A custom Gazebo model named
 
-```
+```text
 4022_gz_x500_docking
 ```
 
 has been developed specifically for ALDAS.
 
-Instead of using multiple independent PX4 models, the drone combines several existing Gazebo models into a single simulation platform.
+Instead of using multiple independent PX4 simulation models, this vehicle combines the capabilities of several existing Gazebo drone models into a single platform designed for autonomous docking research.
 
-## Integrated Sensors
+### Integrated Sensor Suite
 
 - RGB Monocular Camera
 - Depth Camera
@@ -77,13 +77,15 @@ This unified platform enables realistic autonomous docking experiments without s
 
 <div align="center">
 
-<img src="./assets/aldas_architecture.png" alt="ALDAS Logo" width="800"/>
+<img src="./assets/aldas_architecture.png" alt="ALDAS Architecture" width="850"/>
+
+</div>
 
 ---
 
 # Repository Structure
 
-```
+```text
 Project-ALDAS
 │
 ├── PX4-Autopilot
@@ -113,7 +115,7 @@ Project-ALDAS
 - Ubuntu 24.04 LTS
 - ROS 2 Jazzy
 - Gazebo Harmonic
-- PX4-Autopilot
+- PX4 Autopilot
 - Micro XRCE-DDS Agent
 - CMake
 - Ninja
@@ -121,13 +123,15 @@ Project-ALDAS
 
 Detailed installation instructions are available in:
 
-```
+```text
 docs/setup.md
 ```
 
 ---
 
-# Clone Repository
+# Quick Start
+
+### 1. Clone the Repository
 
 ```bash
 git clone --recursive <repository-url>
@@ -135,9 +139,7 @@ git clone --recursive <repository-url>
 cd Project-ALDAS
 ```
 
----
-
-# Build PX4
+### 2. Build PX4
 
 ```bash
 cd PX4-Autopilot
@@ -147,9 +149,7 @@ bash Tools/setup/ubuntu.sh
 make px4_sitl
 ```
 
----
-
-# Launch Simulation
+### 3. Launch the Simulation
 
 ```bash
 cd PX4-Autopilot
@@ -161,63 +161,20 @@ This launches:
 
 - PX4 SITL
 - Gazebo Harmonic
-- Custom docking drone
-- Integrated sensor suite
+- Custom docking UAV
+- Complete onboard sensor suite
 
 ---
 
-# Sensor Topics
+# Available Sensors
 
-## RGB Camera
-
-```
-/world/default/model/4022_gz_x500_docking/.../camera/image
-```
-
----
-
-## Depth Camera
-
-```
-/world/default/model/4022_gz_x500_docking/.../depth_camera
-```
-
----
-
-## 2D LiDAR
-
-```
-/world/default/model/4022_gz_x500_docking/.../scan
-```
-
----
-
-## IMU
-
-```
-/imu
-```
-
----
-
-## GPS
-
-```
-/navsat
-```
-
----
-
-# Development Roadmap
-
-- UAV–UGV Communication
-- Vision-based Docking
-- AprilTag Pose Estimation
-- Autonomous Precision Landing
-- Rover Navigation
-- Battery Charging Simulation
-- Hardware Integration
-- Multi-Drone Support
+| Sensor | Example Topic |
+|----------|---------------|
+| RGB Camera | `/world/default/model/4022_gz_x500_docking/.../camera/image` |
+| Depth Camera | `/world/default/model/4022_gz_x500_docking/.../depth_camera` |
+| 2D LiDAR | `/world/default/model/4022_gz_x500_docking/.../scan` |
+| IMU | `/imu` |
+| GPS | `/navsat` |
 
 ---
 
@@ -225,24 +182,45 @@ This launches:
 
 | Document | Description |
 |----------|-------------|
-| docs/setup.md | Environment setup |
-| docs/simulation.md | Running the simulation |
-| docs/architecture.md | System architecture |
-| docs/development-notes.md | Development notes |
-| docs/known-issues.md | Known issues and fixes |
+| `docs/setup.md` | Development environment setup |
+| `docs/simulation.md` | Running the simulation |
+| `docs/architecture.md` | System architecture |
+| `docs/development-notes.md` | Development notes and implementation details |
+| `docs/known-issues.md` | Known issues, debugging logs, and fixes |
 
 ---
 
+# Development Roadmap
+
+- UAV–UGV Communication
+- Vision-Based Docking
+- AprilTag Pose Estimation
+- Precision Autonomous Landing
+- Rover Navigation
+- Battery Charging Simulation
+- Hardware Integration
+- Docker-Based Development Environment
+- Multi-Drone Support
+
+---
+
+# Upstream Contributions
+
+During the development of the custom docking platform, an abnormal memory growth issue related to Gazebo camera simulation was identified, investigated, and resolved.
+
+The investigation resulted in an upstream contribution to the PX4 ecosystem.
+
+> **Pull Request:** *(Add the GitHub PR link here once it is merged.)*
+
+---
 
 # Contributors
 
-<table>
-<tr>
-<td align="center">
-<b>ALDAS Development Team</b>
-</td>
-</tr>
-</table>
+<div align="center">
+
+**ALDAS Development Team**
+
+</div>
 
 ---
 
@@ -256,7 +234,9 @@ See the [LICENSE](LICENSE) file for details.
 
 # Acknowledgements
 
-This project is built upon the work of the following open-source communities:
+This project builds upon the work of the open-source robotics community.
+
+Special thanks to:
 
 - PX4 Autopilot
 - Gazebo Harmonic
