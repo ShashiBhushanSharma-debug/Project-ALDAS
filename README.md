@@ -75,30 +75,9 @@ This unified platform enables realistic autonomous docking experiments without s
 
 # System Architecture
 
-```
-                   Gazebo Harmonic
-          (Physics + Rendering + Sensors)
-                      │
-                      ▼
-               Custom X500 Docking Model
-                      │
-         ┌────────────┼────────────┐
-         │            │            │
-         ▼            ▼            ▼
-      RGB Cam     Depth Cam     LiDAR
-         │            │            │
-         └────────────┼────────────┘
-                      ▼
-                  ROS 2 Jazzy
-                      │
-             Perception & Planning
-                      │
-                      ▼
-                  PX4 Offboard
-                      │
-                      ▼
-                 PX4 SITL Flight Stack
-```
+<div align="center">
+
+<img src="./assets/aldas_architecture.png" alt="ALDAS Logo" width="800"/>
 
 ---
 
