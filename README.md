@@ -255,19 +255,6 @@ This launches:
 ---
 
 
-# Future Work
-
-- Autonomous docking controller
-- Visual servoing
-- AI-based landing guidance
-- SLAM integration
-- Real hardware deployment
-- Dockerized development environment
-- CI/CD pipeline
-- Multi-robot mission planning
-
----
-
 # Contributors
 
 <table>
