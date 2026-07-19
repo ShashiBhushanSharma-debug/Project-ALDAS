@@ -160,7 +160,7 @@
                     // Case 3: Descending the drone to land and disarming it after landing
                     traj_msg.position[2] = 0.0;  // This is the landing position +Z
 
-                    if(current_Altitude <= 0.17){
+                    if(current_Altitude <= 0.16){
                         RCLCPP_INFO(this->get_logger(), "Landing is completed and now Disarming the droibne ...");
                         publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 0); // Disarming the drone
                         flight_state_ = 4;
