@@ -1,0 +1,35 @@
+# Build artifacts
+build/
+install/
+log/
+*.pyc
+__pycache__/
+*.o
+*.a
+*.so
+*.dylib
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Colcon / ROS generated files
+*.colcon
+*.install
+*.log
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# CMake / compiler artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/

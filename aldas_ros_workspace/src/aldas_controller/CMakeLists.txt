@@ -23,4 +23,22 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+# =================================================================
+# ALDAS CONTROLLER TARGETS (Added code)
+# =================================================================
+
+# 1. Tell CMake to compile your new node
+add_executable(offboard_hover_node src/offboard_hover_node.cpp)
+
+# 2. Link the executable to the required ROS 2 and PX4 message packages
+ament_target_dependencies(offboard_hover_node rclcpp geometry_msgs px4_msgs)
+
+# 3. Ensure the binary is installed to the correct ROS 2 directory structure
+install(TARGETS
+  offboard_hover_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# =================================================================
+# This must ALWAYS remain the last line!
 ament_package()
