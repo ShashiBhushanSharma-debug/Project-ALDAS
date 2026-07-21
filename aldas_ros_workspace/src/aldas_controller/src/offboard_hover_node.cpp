@@ -157,17 +157,18 @@
                     break;
 
                 case 3:
-                    // Case 3: Descending the drone to land and disarming it after landing
-                    traj_msg.position[2] = 0.0;  // This is the landing position +Z
-
-                    RCLCPP_INFO(this->get_logger(), "Descending the drone to land ...");
-
-                    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND);
-                    flight_state_ = 4; // changing the state to the disarmed state
+                    // Case 3: We don't guess the ground height. We tell PX4 to auto-land!
+                    RCLCPP_INFO(this->get_logger(), "Initiating Landing the drone ...");
+                    
+                    // Send the MAVLink Auto-Land command
+                    // PX4 will take over, descend, detect the ground, and disarm automatically.
+                    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND); 
+                    
+                    flight_state_ = 4;
                     break;
 
-                case 4: // finished the offboard control and disarmed the drone
-                    RCLCPP_INFO(this->get_logger(), "Offboard Control is completed and drone is disarmed ...");
+                case 4: 
+                    RCLCPP_INFO(this->get_logger(), "Landing in progress. PX4 will auto-disarm upon touchdown.");
                     break;
             }
 
