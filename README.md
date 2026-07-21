@@ -166,13 +166,13 @@ This launches:
 
 
 
-# Current Development Progress
+# Current Development Progress Video
 
 <div align="center">
 
 <img src="./assets/demo.gif" alt="ALDAS Demo" width="900"/>
 
-**Current Autonomous Launching and Docking Simulation**
+**Current Autonomous Takeoff and Landing Simulation**
 
 </div>
 
