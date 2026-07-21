@@ -164,6 +164,22 @@ This launches:
 
 ---
 
+
+
+# Current Development Progress
+
+<div align="center">
+
+<img src="./assets/demo.gif" alt="ALDAS Demo" width="900"/>
+
+**Current Autonomous Launching and Docking Simulation**
+
+</div>
+
+---
+
+
+
 # Available Sensors
 
 | Sensor | Example Topic |
