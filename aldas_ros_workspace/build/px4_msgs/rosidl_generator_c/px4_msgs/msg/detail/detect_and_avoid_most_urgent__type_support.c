@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/detect_and_avoid_most_urgent__type_support.h"
 #include "px4_msgs/msg/detail/detect_and_avoid_most_urgent__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
+#include "px4_msgs/msg/detail/detect_and_avoid_most_urgent__type_support.h"
 #include "px4_msgs/msg/detail/detect_and_avoid_most_urgent__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

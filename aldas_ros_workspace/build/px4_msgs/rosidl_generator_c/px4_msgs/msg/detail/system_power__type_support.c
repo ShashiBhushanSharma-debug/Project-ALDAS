@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "px4_msgs/msg/detail/system_power__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "px4_msgs/msg/detail/system_power__struct.h"
 #include "px4_msgs/msg/detail/system_power__functions.h"
+#include "px4_msgs/msg/detail/system_power__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

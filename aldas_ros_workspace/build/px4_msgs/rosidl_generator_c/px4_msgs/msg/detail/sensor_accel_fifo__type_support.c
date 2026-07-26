@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "px4_msgs/msg/detail/sensor_accel_fifo__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/sensor_accel_fifo__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/sensor_accel_fifo__type_support.h"
 
 #ifdef __cplusplus

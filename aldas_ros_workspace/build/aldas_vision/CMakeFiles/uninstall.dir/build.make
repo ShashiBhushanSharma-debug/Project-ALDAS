@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shashi/ALDAS/aldas_ros_workspace/src/aldas_vision
+CMAKE_SOURCE_DIR = /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/src/aldas_vision
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision
+CMAKE_BINARY_DIR = /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/aldas_vision
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shashi/ALDAS/aldas_ros_workspace/src/aldas_vision /home/shashi/ALDAS/aldas_ros_workspace/src/aldas_vision /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision /home/shashi/ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/aldas_vision && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/src/aldas_vision /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/src/aldas_vision /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/aldas_vision /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/aldas_vision /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/aldas_vision/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 
