@@ -10,7 +10,25 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(sensor_msgs REQUIRED)
-find_package(px4_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
+add_executable(aldas_vision_node src/aldas_vision_node.cpp)
+
+ament_target_dependencies(aldas_vision_node rclcpp sensor_msgs geometry_msgs cv_bridge)
+
+target_link_libraries(
+  aldas_vision_node
+  ${OpenCV_LIBS}
+)
+
+install(TARGETS
+  aldas_vision_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
