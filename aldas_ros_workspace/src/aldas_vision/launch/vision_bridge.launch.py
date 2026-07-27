@@ -3,8 +3,8 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     # Define the Gazebo topic names
-    gz_image_topic = '/world/default/model/x500_docking_0/link/lidar_sensor_link/sensor/downward_camera/image'
-    gz_info_topic = '/world/default/model/x500_docking_0/link/lidar_sensor_link/sensor/downward_camera/camera_info'
+    gz_image_topic = '/world/aruco/model/x500_docking_0/link/lidar_sensor_link/sensor/downward_camera/image'
+    gz_info_topic = '/world/aruco/model/x500_docking_0/link/lidar_sensor_link/sensor/downward_camera/camera_info'
 
     # The bridge node that translates Gazebo data to ROS 2
     bridge_node = Node(

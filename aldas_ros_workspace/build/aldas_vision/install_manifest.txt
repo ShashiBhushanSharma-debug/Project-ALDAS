@@ -1,3 +1,5 @@
+/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/install/aldas_vision/lib/aldas_vision/aldas_vision_node
+/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/launch/vision_bridge.launch.py
 /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/install/aldas_vision/share/ament_index/resource_index/package_run_dependencies/aldas_vision
 /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/install/aldas_vision/share/ament_index/resource_index/parent_prefix_path/aldas_vision
 /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/install/aldas_vision/share/aldas_vision/environment/ament_prefix_path.sh
