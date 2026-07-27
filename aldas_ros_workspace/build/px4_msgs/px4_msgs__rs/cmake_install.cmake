@@ -1,8 +1,8 @@
-# Install script for directory: /home/shashi/ALDAS/aldas_ros_workspace/build/px4_msgs/px4_msgs__rs
+# Install script for directory: /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/px4_msgs__rs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/shashi/ALDAS/aldas_ros_workspace/install/px4_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/install/px4_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

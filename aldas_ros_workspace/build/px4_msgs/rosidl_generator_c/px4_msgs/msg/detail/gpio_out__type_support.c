@@ -6,8 +6,8 @@
 
 #include "px4_msgs/msg/detail/gpio_out__type_support.h"
 #include "px4_msgs/msg/detail/gpio_out__struct.h"
-#include "px4_msgs/msg/detail/gpio_out__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "px4_msgs/msg/detail/gpio_out__functions.h"
 
 #ifdef __cplusplus
 extern "C"

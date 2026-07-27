@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/esc_eeprom_read__functions.h"
 #include "px4_msgs/msg/detail/esc_eeprom_read__type_support.h"
+#include "px4_msgs/msg/detail/esc_eeprom_read__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/esc_eeprom_read__struct.h"
 

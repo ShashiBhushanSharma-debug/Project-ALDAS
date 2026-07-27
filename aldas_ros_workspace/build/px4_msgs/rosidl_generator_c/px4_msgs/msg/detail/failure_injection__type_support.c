@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/failure_injection__struct.h"
 #include "px4_msgs/msg/detail/failure_injection__functions.h"
+#include "px4_msgs/msg/detail/failure_injection__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/failure_injection__type_support.h"
 

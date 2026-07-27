@@ -1,1 +1,1 @@
-cv_bridge:px4_msgs:rclcpp:sensor_msgs
+cv_bridge:geometry_msgs:opencv:rclcpp:sensor_msgs

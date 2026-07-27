@@ -11,10 +11,11 @@ find_package(rclcpp REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(OpenCV REQUIRED)
 
 add_executable(aldas_vision_node src/aldas_vision_node.cpp)
 
-ament_target_dependencies(aldas_vision_node rclcpp sensor_msgs geometry_msgs cv_bridge)
+ament_target_dependencies(aldas_vision_node rclcpp sensor_msgs geometry_msgs cv_bridge OpenCV)
 
 target_link_libraries(
   aldas_vision_node

@@ -105,7 +105,7 @@ public:
             std::bind(&AldasVisionNode::camera_info_callback, this, std::placeholders::_1));
 
             //Aruco params
-            aruco_dict_ = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_6X6_250);
+            aruco_dict_ = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_4X4_50);
             aruco_params_ = cv::aruco::DetectorParameters::create();
             RCLCPP_INFO(this->get_logger(), "Aldas Vision Node initialized.");
     }

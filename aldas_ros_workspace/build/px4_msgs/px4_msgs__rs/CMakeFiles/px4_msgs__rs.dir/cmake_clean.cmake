@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
-  "/home/shashi/ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/Cargo.toml"
-  "/home/shashi/ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/build.rs"
-  "/home/shashi/ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/lib.rs"
-  "/home/shashi/ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/msg.rs"
-  "/home/shashi/ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/msg/rmw.rs"
-  "/home/shashi/ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/srv.rs"
-  "/home/shashi/ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/srv/rmw.rs"
+  "/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/Cargo.toml"
+  "/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/build.rs"
+  "/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/lib.rs"
+  "/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/msg.rs"
+  "/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/msg/rmw.rs"
+  "/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/srv.rs"
+  "/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust/src/srv/rmw.rs"
   "CMakeFiles/px4_msgs__rs"
 )
 
