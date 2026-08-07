@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/src/px4_msgs
+CMAKE_SOURCE_DIR = /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/src/px4_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs
+CMAKE_BINARY_DIR = /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/build/px4_msgs
 
 # Utility rule file for ament_cmake_python_build_px4_msgs_egg.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/compiler_depend.mak
 include CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_px4_msgs_egg:
-	cd /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/ament_cmake_python/px4_msgs && /usr/bin/python3 setup.py egg_info
+	cd /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/ament_cmake_python/px4_msgs && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_px4_msgs_egg: CMakeFiles/ament_cmake_python_build_px4_msgs_egg
 ament_cmake_python_build_px4_msgs_egg: CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/clean
 
 CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/depend:
-	cd /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/src/px4_msgs /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/src/px4_msgs /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs /home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/build/px4_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/src/px4_msgs /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/src/px4_msgs /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/build/px4_msgs /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/build/px4_msgs /home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/build/px4_msgs/CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ament_cmake_python_build_px4_msgs_egg.dir/depend
 

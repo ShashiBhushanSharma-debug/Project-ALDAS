@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/rover_rate_status__type_support.h"
 #include "px4_msgs/msg/detail/rover_rate_status__functions.h"
+#include "px4_msgs/msg/detail/rover_rate_status__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/rover_rate_status__struct.h"
 

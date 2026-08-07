@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "px4_msgs/msg/detail/vehicle_roi__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/vehicle_roi__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/vehicle_roi__functions.h"
 
 #ifdef __cplusplus

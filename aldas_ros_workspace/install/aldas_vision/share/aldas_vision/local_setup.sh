@@ -2,7 +2,7 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
-: ${AMENT_CURRENT_PREFIX:="/home/shashi/Desktop/Git/Project-ALDAS/aldas_ros_workspace/install/aldas_vision"}
+: ${AMENT_CURRENT_PREFIX:="/home/zangetsu/native_projects/Project-ALDAS/aldas_ros_workspace/install/aldas_vision"}
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \

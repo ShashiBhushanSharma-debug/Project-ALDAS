@@ -4,6 +4,7 @@
 #include <geometry_msgs/msg/point.hpp>
 #include <sensor_msgs/image_encodings.hpp>
 #include <chrono>
+#include <cmath>
 //for opencv and cv_bridge
 #include <cv_bridge/cv_bridge.hpp>
 #include <opencv2/opencv.hpp>
@@ -58,25 +59,68 @@ private:
 
         geometry_msgs::msg::Point target_error;
 
+        //draw camera otpical center crossharir for visual reference
+        int center_x = cv_ptr->image.cols / 2;
+        int center_y = cv_ptr->image.rows /2;
+        cv::drawMarker(cv_ptr->image, cv::Point(center_x, center_y), cv::Scalar(0, 255, 255), cv::MARKER_CROSS, 20, 2);
+
         if (!marker_ids.empty()) {
             std::vector<cv::Vec3d> rvecs, tvecs;
             
             // estimate Pose (Returns X, Y, Z translation relative to camera)
             cv::aruco::estimatePoseSingleMarkers(marker_corners, marker_length_, camera_matrix_, dist_coeffs_, rvecs, tvecs);
 
-            // Extract data for the controller
-            target_error.x = tvecs[0][0]; // x axis error
-            target_error.y = tvecs[0][1]; // y axis error
-            target_error.z = 1.0;         // 1.0 flag means target is locked
+            // 3. Extract Drift & Distance Metrics
+            double drift_x = tvecs[0][0];     // Horizontal offset (m)
+            double drift_y = tvecs[0][1];     // Vertical offset (m)
+            double distance_z = tvecs[0][2];  // Depth / Altitude (m)
+            
+            // Straight-line 3D Euclidean distance
+            double total_distance = std::sqrt(drift_x * drift_x + drift_y * drift_y + distance_z * distance_z);
+
+            // 4. Fill ROS 2 Message
+            target_error.x = drift_x;
+            target_error.y = drift_y;
+            target_error.z = distance_z; // Actual depth in meters
 
             // Draw bounding box and 3D axis on the image for visual debugging
             cv::aruco::drawDetectedMarkers(cv_ptr->image, marker_corners, marker_ids);
             cv::drawFrameAxes(cv_ptr->image, camera_matrix_, dist_coeffs_, rvecs[0], tvecs[0], 0.1);
+            
+
+            // Display HUD Telemetry Text on Image
+            char text_buffer[100];
+            std::snprintf(text_buffer, sizeof(text_buffer), "Drift X: %.3f m", drift_x);
+            cv::putText(cv_ptr->image, text_buffer, cv::Point(10, 30), cv::FONT_HERSHEY_SIMPLEX, 0.6, cv::Scalar(0, 255, 0), 2);
+
+            std::snprintf(text_buffer, sizeof(text_buffer), "Drift Y: %.3f m", drift_y);
+            cv::putText(cv_ptr->image, text_buffer, cv::Point(10, 60), cv::FONT_HERSHEY_SIMPLEX, 0.6, cv::Scalar(0, 255, 0), 2);
+
+            std::snprintf(text_buffer, sizeof(text_buffer), "Depth Z: %.3f m", distance_z);
+            cv::putText(cv_ptr->image, text_buffer, cv::Point(10, 90), cv::FONT_HERSHEY_SIMPLEX, 0.6, cv::Scalar(0, 255, 0), 2);
+
+            std::snprintf(text_buffer, sizeof(text_buffer), "3D Dist: %.3f m", total_distance);
+            cv::putText(cv_ptr->image, text_buffer, cv::Point(10, 120), cv::FONT_HERSHEY_SIMPLEX, 0.6, cv::Scalar(0, 255, 255), 2);
+            
+
+            // Terminal Log (Throttled to once every 1 second)
+            RCLCPP_INFO_THROTTLE(
+                this->get_logger(), *this->get_clock(), 1000,
+                "[TARGET LOCKED] Drift X: %.3fm | Drift Y: %.3fm | Depth Z: %.3fm | Total Dist: %.3fm",
+                drift_x, drift_y, distance_z, total_distance);
+        
         } else {
             // Target lost
             target_error.x = 0.0;
             target_error.y = 0.0;
-            target_error.z = 0.0;
+            target_error.z = -1.0; //negative for lost target..
+
+            cv::putText(cv_ptr->image, "TARGET LOST", cv::Point(10,30), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(0, 0, 255), 2);
+
+            RCLCPP_WARN_THROTTLE(
+                this->get_logger(), *this->get_clock(), 1000, 
+                "[SEARCHING] aruco marker not visible in fram."
+            );
         }
 
         // publish the error coords

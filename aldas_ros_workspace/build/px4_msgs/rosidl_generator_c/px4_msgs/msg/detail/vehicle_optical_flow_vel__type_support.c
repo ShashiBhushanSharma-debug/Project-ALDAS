@@ -6,8 +6,8 @@
 
 #include "px4_msgs/msg/detail/vehicle_optical_flow_vel__struct.h"
 #include "px4_msgs/msg/detail/vehicle_optical_flow_vel__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/vehicle_optical_flow_vel__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

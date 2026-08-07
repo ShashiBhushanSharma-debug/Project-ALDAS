@@ -6,8 +6,8 @@
 
 #include "px4_msgs/msg/detail/gimbal_device_information__functions.h"
 #include "px4_msgs/msg/detail/gimbal_device_information__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "px4_msgs/msg/detail/gimbal_device_information__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"
