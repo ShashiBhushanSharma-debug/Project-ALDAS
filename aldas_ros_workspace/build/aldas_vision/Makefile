@@ -197,6 +197,43 @@ aldas_vision_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aldas_vision_uninstall.dir/build.make CMakeFiles/aldas_vision_uninstall.dir/build
 .PHONY : aldas_vision_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named aldas_vision_node
+
+# Build rule for target.
+aldas_vision_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aldas_vision_node
+.PHONY : aldas_vision_node
+
+# fast build rule for target.
+aldas_vision_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aldas_vision_node.dir/build.make CMakeFiles/aldas_vision_node.dir/build
+.PHONY : aldas_vision_node/fast
+
+src/aldas_vision_node.o: src/aldas_vision_node.cpp.o
+.PHONY : src/aldas_vision_node.o
+
+# target to build an object file
+src/aldas_vision_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aldas_vision_node.dir/build.make CMakeFiles/aldas_vision_node.dir/src/aldas_vision_node.cpp.o
+.PHONY : src/aldas_vision_node.cpp.o
+
+src/aldas_vision_node.i: src/aldas_vision_node.cpp.i
+.PHONY : src/aldas_vision_node.i
+
+# target to preprocess a source file
+src/aldas_vision_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aldas_vision_node.dir/build.make CMakeFiles/aldas_vision_node.dir/src/aldas_vision_node.cpp.i
+.PHONY : src/aldas_vision_node.cpp.i
+
+src/aldas_vision_node.s: src/aldas_vision_node.cpp.s
+.PHONY : src/aldas_vision_node.s
+
+# target to generate assembly for a file
+src/aldas_vision_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aldas_vision_node.dir/build.make CMakeFiles/aldas_vision_node.dir/src/aldas_vision_node.cpp.s
+.PHONY : src/aldas_vision_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... aldas_vision_uninstall"
 	@echo "... uninstall"
+	@echo "... aldas_vision_node"
+	@echo "... src/aldas_vision_node.o"
+	@echo "... src/aldas_vision_node.i"
+	@echo "... src/aldas_vision_node.s"
 .PHONY : help
 
 
